@@ -77,7 +77,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="btnTwo" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="BtnFive" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="btnFive" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="btnEight" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="btnDot" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
@@ -109,7 +109,7 @@
                       <Group type="102" attributes="0">
                           <Component id="btnTwo" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="BtnFive" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="btnFive" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Component id="btnEight" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -158,47 +158,74 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOneActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnTwo">
           <Properties>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTwoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnThree">
           <Properties>
             <Property name="text" type="java.lang.String" value="3"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThreeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnFour">
           <Properties>
             <Property name="text" type="java.lang.String" value="4"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFourActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BtnFive">
+        <Component class="javax.swing.JButton" name="btnFive">
           <Properties>
             <Property name="text" type="java.lang.String" value="5"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiveActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSix">
           <Properties>
             <Property name="text" type="java.lang.String" value="6"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSixActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSeven">
           <Properties>
             <Property name="text" type="java.lang.String" value="7"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSevenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnEight">
           <Properties>
             <Property name="text" type="java.lang.String" value="8"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEightActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnNine">
           <Properties>
             <Property name="text" type="java.lang.String" value="9"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNineActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnPlus">
           <Properties>
@@ -234,11 +261,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnZeroActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnClear">
           <Properties>
             <Property name="text" type="java.lang.String" value="CLEAR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnExit">
           <Properties>

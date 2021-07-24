@@ -33,7 +33,7 @@ public class JavaCalculator extends javax.swing.JFrame {
         btnTwo = new javax.swing.JButton();
         btnThree = new javax.swing.JButton();
         btnFour = new javax.swing.JButton();
-        BtnFive = new javax.swing.JButton();
+        btnFive = new javax.swing.JButton();
         btnSix = new javax.swing.JButton();
         btnSeven = new javax.swing.JButton();
         btnEight = new javax.swing.JButton();
@@ -52,23 +52,68 @@ public class JavaCalculator extends javax.swing.JFrame {
         setTitle("Calculator");
 
         btnOne.setText("1");
+        btnOne.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOneActionPerformed(evt);
+            }
+        });
 
         btnTwo.setText("2");
         btnTwo.setToolTipText("");
+        btnTwo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTwoActionPerformed(evt);
+            }
+        });
 
         btnThree.setText("3");
+        btnThree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThreeActionPerformed(evt);
+            }
+        });
 
         btnFour.setText("4");
+        btnFour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFourActionPerformed(evt);
+            }
+        });
 
-        BtnFive.setText("5");
+        btnFive.setText("5");
+        btnFive.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiveActionPerformed(evt);
+            }
+        });
 
         btnSix.setText("6");
+        btnSix.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSixActionPerformed(evt);
+            }
+        });
 
         btnSeven.setText("7");
+        btnSeven.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSevenActionPerformed(evt);
+            }
+        });
 
         btnEight.setText("8");
+        btnEight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEightActionPerformed(evt);
+            }
+        });
 
         btnNine.setText("9");
+        btnNine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNineActionPerformed(evt);
+            }
+        });
 
         btnPlus.setText("+");
 
@@ -83,8 +128,18 @@ public class JavaCalculator extends javax.swing.JFrame {
         btnDot.setText(".");
 
         btnZero.setText("0");
+        btnZero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnZeroActionPerformed(evt);
+            }
+        });
 
         btnClear.setText("CLEAR");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
         btnExit.setText("Exit");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +168,7 @@ public class JavaCalculator extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEight, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
@@ -138,7 +193,7 @@ public class JavaCalculator extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnTwo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
-                        .addComponent(BtnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnFive, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
                         .addComponent(btnEight, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
@@ -205,6 +260,70 @@ public class JavaCalculator extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
+    private void btnOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOneActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnOne.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnOneActionPerformed
+
+    private void btnTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTwoActionPerformed
+        String btnOneText =  txtDisplay.getText() + btnTwo.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnTwoActionPerformed
+
+    private void btnThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThreeActionPerformed
+        String btnOneText = txtDisplay.getText() + btnThree.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnThreeActionPerformed
+
+    private void btnFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFourActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnFour.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnFourActionPerformed
+
+    private void btnFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiveActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnFive.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnFiveActionPerformed
+
+    private void btnSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSixActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnSix.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnSixActionPerformed
+
+    private void btnSevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSevenActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnSeven.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnSevenActionPerformed
+
+    private void btnEightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEightActionPerformed
+        String btnOneText = txtDisplay.getText() + btnEight.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnEightActionPerformed
+
+    private void btnNineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNineActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnNine.getText();
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnNineActionPerformed
+
+    private void btnZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZeroActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnZero.getText() ;
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnZeroActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        txtDisplay.setText("");
+    }//GEN-LAST:event_btnClearActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,13 +360,13 @@ public class JavaCalculator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnFive;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnDivide;
     private javax.swing.JButton btnDot;
     private javax.swing.JButton btnEight;
     private javax.swing.JButton btnEqual;
     private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnFive;
     private javax.swing.JButton btnFour;
     private javax.swing.JButton btnMinus;
     private javax.swing.JButton btnMultiply;
