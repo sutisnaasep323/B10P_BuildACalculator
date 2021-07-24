@@ -11,6 +11,7 @@ package jCalculator;
  */
 public class JavaCalculator extends javax.swing.JFrame {
 
+    private double totall = 0.0;
     /**
      * Creates new form JavaCalculator
      */
@@ -116,6 +117,11 @@ public class JavaCalculator extends javax.swing.JFrame {
         });
 
         btnPlus.setText("+");
+        btnPlus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusActionPerformed(evt);
+            }
+        });
 
         btnMultiply.setText("x");
 
@@ -323,6 +329,12 @@ public class JavaCalculator extends javax.swing.JFrame {
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         txtDisplay.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
+        // TODO add your handling code here:
+        totall = totall + Double.parseDouble(txtDisplay.getText());
+        txtDisplay.setText("");
+    }//GEN-LAST:event_btnPlusActionPerformed
 
     /**
      * @param args the command line arguments
