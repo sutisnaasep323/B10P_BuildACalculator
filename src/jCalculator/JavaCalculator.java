@@ -11,7 +11,17 @@ package jCalculator;
  */
 public class JavaCalculator extends javax.swing.JFrame {
 
-    private double totall = 0.0;
+    private double total1 = 0.0;
+    private double total2 = 0.0;
+    private char math_operator;
+
+    
+    private void getOperator(String btnText){
+        
+        math_operator = btnText.charAt(0);
+        total1 = total1 + Double.parseDouble(txtDisplay.getText());
+        txtDisplay.setText("");
+    }
     /**
      * Creates new form JavaCalculator
      */
@@ -123,15 +133,42 @@ public class JavaCalculator extends javax.swing.JFrame {
             }
         });
 
-        btnMultiply.setText("x");
+        btnMultiply.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnMultiply.setText("*");
+        btnMultiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplyActionPerformed(evt);
+            }
+        });
 
+        btnMinus.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnMinus.setText("-");
+        btnMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinusActionPerformed(evt);
+            }
+        });
 
         btnDivide.setText("/");
+        btnDivide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDivideActionPerformed(evt);
+            }
+        });
 
         btnEqual.setText("=");
+        btnEqual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEqualActionPerformed(evt);
+            }
+        });
 
         btnDot.setText(".");
+        btnDot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDotActionPerformed(evt);
+            }
+        });
 
         btnZero.setText("0");
         btnZero.addActionListener(new java.awt.event.ActionListener() {
@@ -327,14 +364,61 @@ public class JavaCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnZeroActionPerformed
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        total2 = 0;
         txtDisplay.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
         // TODO add your handling code here:
-        totall = totall + Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
+//        total1 = total1 + Double.parseDouble(txtDisplay.getText());
+//        txtDisplay.setText("");
+        String button_text = btnPlus.getText();
+        getOperator(button_text);
     }//GEN-LAST:event_btnPlusActionPerformed
+
+    private void btnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEqualActionPerformed
+        
+        switch(math_operator){
+            case '+':
+                total2 = total1 + Double.parseDouble(txtDisplay.getText());
+                break;
+            case '*':
+                total2 = total1 * Double.parseDouble(txtDisplay.getText());
+                break;
+            case '-':
+                total2 = total1 - Double.parseDouble(txtDisplay.getText());
+                break;
+            case '/':
+                total2 = total1 / Double.parseDouble(txtDisplay.getText());
+                break;
+
+        }
+        
+//        total2 = total1 + Double.parseDouble(txtDisplay.getText());
+        txtDisplay.setText(Double.toString(total2));
+        total1 = 0;
+    }//GEN-LAST:event_btnEqualActionPerformed
+
+    private void btnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplyActionPerformed
+        String button_text = btnMultiply.getText();
+        getOperator(button_text);
+    }//GEN-LAST:event_btnMultiplyActionPerformed
+
+    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
+        String button_text = btnMinus.getText();
+        getOperator(button_text);
+    }//GEN-LAST:event_btnMinusActionPerformed
+
+    private void btnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivideActionPerformed
+        String button_text = btnDivide.getText();
+        getOperator(button_text);
+    }//GEN-LAST:event_btnDivideActionPerformed
+
+    private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
+        String btnOneText =  txtDisplay.getText() +btnDot.getText() ;
+        String textField = txtDisplay.getText();
+        txtDisplay.setText(btnOneText);
+    }//GEN-LAST:event_btnDotActionPerformed
 
     /**
      * @param args the command line arguments
